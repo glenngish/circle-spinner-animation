@@ -1,0 +1,182 @@
+* {
+  position: relative;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* common styles */
+.hidden {
+  display: none !important;
+}
+.disabled {
+  background-color: #aaaaaa !important;
+}
+
+/* navbar styles */
+.navbar {
+  justify-content: space-between;
+  display: flex;
+}
+
+.rounded-header-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.rounded-header-btn:active {
+  background-color: #dddddd;
+}
+
+/* main content style */
+
+.content {
+  display: flex;
+}
+
+.icon-content {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-icon {
+  width: 50px;
+  height: 50px;
+  transition: 0.3s;
+}
+.scaled-app-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.app-info-content {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-row {
+  display: flex;
+  gap: 3px;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 15px;
+}
+.btn-cancel {
+  flex-grow: 1;
+  border-radius: 15px;
+  height: 30px;
+
+  background-color: transparent;
+  border-width: 1px;
+}
+.btn-download {
+  flex-grow: 1;
+  border-radius: 15px;
+  height: 30px;
+
+  border-width: 0;
+  color: white;
+  background-color: #0054e0;
+}
+
+.btn-download:active {
+  width: 50%;
+  border-radius: 15px;
+  height: 30px;
+
+  border-width: 0;
+  color: white;
+  background-color: #0054e0;
+}
+
+/* circular progress styles */
+.circular-progress {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+}
+.inner-circle {
+  position: absolute;
+  width: calc(60px - 5px);
+  height: calc(60px - 5px);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.percentage {
+  position: relative;
+  color: transparent;
+}
+
+/* spinner style */
+
+.spinner-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.spinner-gray {
+  border-top: 2px solid #bbbbbb !important;
+}
+
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -35px 0 0 -35px;
+  width: 70px;
+  height: 70px;
+}
+
+.spinner .path {
+  stroke: #0054e0;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+.path-gray {
+  stroke: #cccccc !important;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}

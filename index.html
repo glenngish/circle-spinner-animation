@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./font-awesome/css/all.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <!-- start of navbar -->
+      <div class="navbar">
+        <button class="rounded-header-btn rounded-circle">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="flex-grow-1"></div>
+        <div>
+          <button class="rounded-header-btn rounded-circle">
+            <i class="fas fa-magnifying-glass"></i>
+          </button>
+          <button class="rounded-header-btn rounded-circle">
+            <i class="fas fa-ellipsis-vertical"></i>
+          </button>
+        </div>
+      </div>
+      <!-- end of navbar -->
+      <div class="content">
+        <div class="icon-content">
+          <!-- spinner area -->
+          <div class="spinner-container hidden">
+            <svg class="spinner" viewBox="0 0 50 50">
+              <circle
+                class="path"
+                cx="25"
+                cy="25"
+                r="20"
+                fill="none"
+                stroke-width="1.5"
+              ></circle>
+            </svg>
+          </div>
+          <!-- progress bar area -->
+          <div
+            class="circular-progress hidden"
+            data-inner-circle-color="white"
+            data-progress-color="#0054e0"
+            data-bg-color="#00000000"
+          >
+            <div class="inner-circle"></div>
+          </div>
+          <!-- app icon -->
+          <object
+            class="app-icon"
+            data="icon-app.svg"
+            type="image/svg+xml"
+          ></object>
+        </div>
+
+        <!-- start of app information area -->
+        <div class="app-info-content">
+          <div class="info-row">
+            <div>Title:</div>
+            <div>Dummy text</div>
+          </div>
+          <div class="info-row">
+            <div>Status:</div>
+            <div class="progress-percentage">Before start</div>
+          </div>
+          <div class="info-row">
+            <div>Properties:</div>
+            <div>Dummy text</div>
+          </div>
+        </div>
+      </div>
+      <!-- end of app information area -->
+
+      <!-- start of buttons -->
+      <div class="button-content">
+        <button class="btn-cancel hidden">Cancel</button>
+        <button class="btn-download">Download</button>
+      </div>
+      <!-- end of buttons -->
+    </div>
+  </body>
+</html>
